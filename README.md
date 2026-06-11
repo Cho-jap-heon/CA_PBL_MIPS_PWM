@@ -28,7 +28,8 @@ switches and writes the same value to the PWM duty register.
 Requirements: Icarus Verilog, GNU Make, and GTKWave.
 
 ```sh
-cd class_13
+git clone https://github.com/Cho-jap-heon/CA_PBL_MIPS_PWM.git
+cd CA_PBL_MIPS_PWM
 make
 gtkwave mips.vcd
 ```
@@ -47,7 +48,7 @@ to 50%, and finally to nearly 100% of each 256-clock PWM period.
 ## File Layout
 
 ```text
-class_13/
+CA_PBL_MIPS_PWM/
 |-- README.md
 |-- Makefile
 |-- motor_control.asm
