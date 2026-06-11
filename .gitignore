@@ -1,0 +1,9 @@
+*.out
+*.vcd
+*.fst
+*.lxt
+*.log
+
+.DS_Store
+Thumbs.db
+Desktop.ini
