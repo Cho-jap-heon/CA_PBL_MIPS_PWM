@@ -1,5 +1,6 @@
 # Test Report: MIPS PWM Motor Controller
-
+Robotics engineering 
+2022028404 최제헌 Jeheon Choi
 ## 1. Motor Profile Verification
 
 The implementation uses **Option B: switch-controlled duty**. The testbench
