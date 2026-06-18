@@ -1,3 +1,6 @@
+Computer architecture 
+pbl assignment
+2022028404 최제헌 Jeheon Choi
 # MIPS PWM Motor Controller
 
 A 5-stage pipelined MIPS processor that reads an 8-bit switch value through
