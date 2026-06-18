@@ -105,11 +105,9 @@ can be measured reliably.
 
 ## 6. Reflection
 
-The hardest part was verifying the boundary between software and hardware. A
-correct PWM module is insufficient if the top-level switch port, MMIO decoder,
-pipeline store data, or machine code is wrong. A self-checking testbench made
-that path observable and repeatable.
+The most difficult part was not the PWM controller itself, but checking whether the value loaded from the switch MMIO address was really reaching the PWM duty register. The PWM module was simple because it only used an 8-bit counter and a comparator. However, the full system could fail at several points: the top-level switch port, the MMIO address decoder, the store-data path, the load-use hazard handling, or the encoded machine instructions in memfile.dat.
 
-With more time, I would add a synthesizable FPGA wrapper with clock division,
-button debouncing, and constraints for a physical board. I would also expose
-named debug ports instead of using hierarchical testbench references.
+To make the verification clearer, I used a self-checking testbench with four switch values: 0, 64, 128, and 255. This made it easier to confirm that pwm_duty followed switches and that pwm_out changed its pulse width accordingly.
+
+If I had more time, I would add an FPGA wrapper with clock division and switch debouncing so that the design could be tested on a real board, not only in simulation.
+Thank you for reading!
