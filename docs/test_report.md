@@ -11,6 +11,7 @@ matches the switch input.
 
 ![Profile B waveform](waveform_profile.png)
 
+The waveform shows that `pwm_duty` follows `switches` after a short delay. This delay is expected because the CPU must execute the software loop: first `lw` reads the switch value from MMIO address `0x90`, then `sw` writes that value to the PWM duty register at MMIO address `0x98`. After the duty register is updated, the high-time of `pwm_out` changes according to the new duty value.
 The waveform regions are:
 
 | Region | Switch/duty | Expected PWM behavior |
