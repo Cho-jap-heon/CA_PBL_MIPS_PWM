@@ -1,5 +1,5 @@
 ##MIPS PWM Motor Controller
-##computer architecure
+##computer architecture
 ##robotics engineering
 ##2022028404 최제헌 Jeheon Choi
 ## 1. Introduction
