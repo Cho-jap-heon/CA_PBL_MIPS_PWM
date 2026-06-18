@@ -92,7 +92,7 @@ forever:
 ```
 
 The program uses `$t0` as the switch address, `$t2` as the duty address, and
-`$t1` as the transferred value. The loop is intentionally short: the processor
+`$t1` as the transferred value. In the main loop, the processor executes `lw` from MMIO address `0x90` to read the current switch value, then executes `sw` to MMIO address `0x98` to update the PWM duty register. This directly verifies the full software-to-hardware path from external input, through the MIPS pipeline, to the PWM peripheral.The loop is intentionally short: the processor
 samples switches frequently, while the PWM register holds the most recent value
 for the independent hardware counter. A `nop` occupies the jump delay slot.
 Pipeline load-use handling stalls the dependent store until the loaded switch
