@@ -1,5 +1,7 @@
-# Design Report: MIPS PWM Motor Controller
-
+##MIPS PWM Motor Controller
+computer architecure
+robotics engineering
+2022028404 최제헌 Jeheon Choi
 ## 1. Introduction
 
 This project combines a 5-stage pipelined MIPS processor, memory-mapped I/O
